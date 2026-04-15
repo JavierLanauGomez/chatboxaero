@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatboxAero — Demo</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-card {
+            background: white;
+            border-radius: 16px;
+            padding: 48px 40px;
+            max-width: 540px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .demo-logo {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+        h1 { color: #1a3a5c; font-size: 24px; margin-bottom: 8px; }
+        p  { color: #556; font-size: 15px; line-height: 1.6; margin-bottom: 12px; }
+        .badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a3a5c;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin: 4px;
+        }
+        .instruccion {
+            margin-top: 24px;
+            padding: 16px;
+            background: #f0f4f8;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #778;
+            text-align: left;
+        }
+        .instruccion code {
+            background: #1a3a5c;
+            color: #fff;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .arrow {
+            position: fixed;
+            bottom: 92px;
+            right: 88px;
+            font-size: 22px;
+            color: #1a3a5c;
+            animation: bounce 1.2s infinite;
+            pointer-events: none;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(0); }
+            50%       { transform: translateX(8px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-card">
+        <div class="demo-logo">✈️</div>
+        <h1>ChatboxAero</h1>
+        <p>Widget de chat inteligente para TiendaAero, impulsado por Llama 3.2 vía Ollama.</p>
+
+        <span class="badge">⚡ Streaming en tiempo real</span>
+        <span class="badge">💬 Historial persistente</span>
+        <span class="badge">📱 Responsive</span>
+        <span class="badge">🔌 Embebible</span>
+        <span class="badge">✨ Markdown</span>
+
+        <div class="instruccion">
+            <strong>Integrar en cualquier página:</strong><br><br>
+            <code>&lt;script src="js/chat-widget.js" type="module"&gt;&lt;/script&gt;</code>
+        </div>
+    </div>
+
+    <!-- Flecha señalando el botón del chat -->
+    <div class="arrow">👉</div>
+
+    <!-- El widget -->
+    <script type="module" src="js/chat-widget.js"></script>
+</body>
+</html>
